@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Nov 12 18:29:27 2021
+# Process ID: 444
+# Current directory: C:/Users/Administrator/Desktop/holiday_lights00
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15756 C:\Users\Administrator\Desktop\holiday_lights00\holiday_lights.xpr
+# Log file: C:/Users/Administrator/Desktop/holiday_lights00/vivado.log
+# Journal file: C:/Users/Administrator/Desktop/holiday_lights00\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/Desktop/holiday_lights00/holiday_lights.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/Administrator/Desktop/holiday_lights/clock.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/Administrator/Desktop/holiday_lights/pin.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+file mkdir C:/Users/Administrator/Desktop/holiday_lights
+add_files -fileset constrs_1 -norecurse {C:/Users/Administrator/Desktop/holiday_lights00/clock.xdc C:/Users/Administrator/Desktop/holiday_lights00/pin.xdc}
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/holiday_lights/clock.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/holiday_lights/clock.xdc
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/holiday_lights/pin.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Administrator/Desktop/holiday_lights/pin.xdc
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 12 18:30:52 2021...

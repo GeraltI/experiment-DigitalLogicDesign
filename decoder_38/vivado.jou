@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Nov 14 13:22:24 2021
+# Process ID: 10588
+# Current directory: E:/experiment/decoder_38
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11152 E:\experiment\decoder_38\decoder_38.xpr
+# Log file: E:/experiment/decoder_38/vivado.log
+# Journal file: E:/experiment/decoder_38\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/experiment/decoder_38/decoder_38.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source decoder_38.tcl
+set_property -name {xsim.simulate.runtime} -value {40ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source decoder_38.tcl
+close_sim
+launch_simulation
+source decoder_38.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/experiment/decoder_38/testbench.v
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source decoder_38.tcl
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files E:/decoder_38/testbench.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 E:/decoder_38/testbench.v
+launch_simulation
+source testbench.tcl
+close_sim
+close_sim

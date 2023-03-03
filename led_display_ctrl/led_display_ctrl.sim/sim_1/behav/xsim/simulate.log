@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+index 0000fffe finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 655385 ns : File "C:/Users/Administrator/Desktop/led_display_ctrl/testbench.v" Line 97

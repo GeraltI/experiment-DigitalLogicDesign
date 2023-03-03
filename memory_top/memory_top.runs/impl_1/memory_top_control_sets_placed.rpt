@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Nov 21 20:54:45 2021
+| Host         : 612-05 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file memory_top_control_sets_placed.rpt
+| Design       : memory_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    54 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            7 |
+|      4 |            1 |
+|     15 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              15 |            2 |
+| No           | No                    | Yes                    |               4 |            4 |
+| No           | Yes                   | No                     |               2 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              53 |           20 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+-----------------------------------+-----------------------------------------+------------------+----------------+
+|               Clock Signal               |           Enable Signal           |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
++------------------------------------------+-----------------------------------+-----------------------------------------+------------------+----------------+
+|  u_clk_div/inst/clk_out1                 |                                   | u_memory_w_r/mem_ena_reg_LDC_i_1_n_0    |                1 |              1 |
+|  u_clk_div/inst/clk_out1                 |                                   | u_memory_w_r/mem_wea_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  u_clk_div/inst/clk_out1                 |                                   | u_memory_w_r/mem_ena_reg_LDC_i_2_n_0    |                1 |              1 |
+|  u_clk_div/inst/clk_out1                 |                                   | u_memory_w_r/mem_wea_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  u_clk_div/inst/clk_out1                 | button_IBUF                       | rst_IBUF                                |                1 |              1 |
+|  u_memory_w_r/mem_ena_reg_LDC_i_1_n_0    |                                   | u_memory_w_r/mem_ena_reg_LDC_i_2_n_0    |                1 |              1 |
+|  u_memory_w_r/mem_wea_reg[0]_LDC_i_1_n_0 |                                   | u_memory_w_r/mem_wea_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  u_clk_div/inst/clk_out1                 | u_memory_w_r/mem_addra[3]_i_1_n_0 | rst_IBUF                                |                1 |              4 |
+|  u_clk_div/inst/clk_out1                 |                                   |                                         |                2 |             15 |
+|  u_clk_div/inst/clk_out1                 | u_memory_w_r/led[15]_i_1_n_0      | rst_IBUF                                |                5 |             16 |
+|  u_clk_div/inst/clk_out1                 | u_memory_w_r/cnt[31]_i_1_n_0      | rst_IBUF                                |               13 |             32 |
++------------------------------------------+-----------------------------------+-----------------------------------------+------------------+----------------+
+
+
